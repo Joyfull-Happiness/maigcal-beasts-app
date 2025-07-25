@@ -1,3 +1,10 @@
+import React, { useState } from 'react';
+
+import CreatureList from './components/CreatureList.jsx'; 
+import CreatureCard from './components/CreatureCard.jsx';
+import AbilitiesList from './components/AbilitiesList.jsx';
+
+
 function App() {
   const creaturesData = [
     {
@@ -25,7 +32,14 @@ function App() {
         'Giant creatures of the deep, adapted to extreme pressures and emitting blinding light.',
     },
   ];
-  return <></>;
+  return <>
+  <H1>Creatures of Elodria</H1>
+  <h4>The best creatures the world has ever seen</h4>
+  <div className="card-container">
+      
+  
+  
+  </>;
 }
 
 export default App;
