@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
+import CreatureList from './components/CreatureList.jsx';
 
-import CreatureList from './components/CreatureList.jsx'; 
-import CreatureCard from './components/CreatureCard.jsx';
-import AbilitiesList from './components/AbilitiesList.jsx';
-
+// import AbilitiesList from './components/AbilitiesList.jsx';
 
 function App() {
   const creaturesData = [
@@ -32,14 +30,29 @@ function App() {
         'Giant creatures of the deep, adapted to extreme pressures and emitting blinding light.',
     },
   ];
-  return <>
-  <H1>Creatures of Elodria</H1>
-  <h4>The best creatures the world has ever seen</h4>
-  <div className="card-container">
-      
-  
-  
-  </>;
+  const [showCreatures, setShowCreatures] = useState(false);
+
+
+  function handleClick() {
+    setShowCreatures(!showCreatures)
+  }
+
+  return (
+    <>
+      <div>
+        {showCreatures ? (
+          <>
+            <h3>Creatures of Elodria</h3>
+            <h4>The best creatures the world has ever seen</h4>
+            <CreatureList creaturesData={creaturesData} />
+          </>
+        ) : (
+          <button onClick={handleClick}>Click here to see the Creatures!</button>
+        )}
+      </div>
+    </>
+  );
+
 }
 
 export default App;
