@@ -1,23 +1,22 @@
+function AbilitiesList({ abilities }) {
 
-
-function AbilitiesList({ creaturesData }) {
-   
     return (
 
-        <div >
+        <div>
 
-<h4>Abilities List</h4>
-    <ol>
-        
-    </ol>
-       {creaturesData.map((creature) => (
- <CreatureCard key={creature.abilities} />)
-    
-         ) }
-                 
-        </div>
-        
+            <h4>Abilities List</h4>
+            <ul>
+                {abilities.map((item) => (
+                     
+                     <li>
+                        {item}
+                     </li>
+                ))}
+
+            </ul>
+                
+          </div>
+
     )
 }
-export default AbilitiesList; 
-
+export default AbilitiesList; 2

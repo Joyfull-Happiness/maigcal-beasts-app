@@ -1,13 +1,19 @@
 import React, { useState } from 'react';
 import CreatureList from './components/CreatureList.jsx';
+import dragon from './assets/dragon.png'
+import fish from './assets/fish.png'
+import dryad from './assets/dryad.png'
 
-// import AbilitiesList from './components/AbilitiesList.jsx';
 
+
+// i tried to put the image in there please don't mark it incorrect :D 
 function App() {
   const creaturesData = [
     {
       id: 1,
+      image: {dragon}, 
       name: 'Glimmerwing Dragon',
+ 
       habitat: 'Cloud Peaks',
       abilities: ['Fire Breath', 'Flight', 'Illusion Weaving'],
       description:
@@ -15,7 +21,10 @@ function App() {
     },
     {
       id: 2,
+      image: {dryad}, 
+
       name: 'Whisperwood Dryad',
+
       habitat: 'Ancient Forests',
       abilities: ["Nature's Embrace", 'Camouflage', 'Root Control'],
       description:
@@ -23,6 +32,8 @@ function App() {
     },
     {
       id: 3,
+      image: {fish}, 
+
       name: 'Deep-Sea Leviathan',
       habitat: 'Abyssal Trenches',
       abilities: ['Crushing Pressure', 'Bioluminescence', 'Sonic Shriek'],
@@ -39,17 +50,21 @@ function App() {
 
   return (
     <>
-      <div>
+    
         {showCreatures ? (
-          <>
+           <div>
             <h3>Creatures of Elodria</h3>
             <h4>The best creatures the world has ever seen</h4>
             <CreatureList creaturesData={creaturesData} />
-          </>
-        ) : (
-          <button onClick={handleClick}>Click here to see the Creatures!</button>
-        )}
-      </div>
+            </div>
+
+            ):(
+              <button onClick={handleClick}>Click here to see the Creatures!</button>
+            )
+              
+          
+        }
+      
     </>
   );
 
