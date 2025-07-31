@@ -6,9 +6,9 @@ function AbilitiesList({ abilities }) {
 
             <h4>Abilities List</h4>
             <ul>
-                {abilities.map((item) => (
+                {abilities.map((item, index) => (
                      
-                     <li>
+                     <li key={index}>
                         {item}
                      </li>
                 ))}
@@ -19,4 +19,4 @@ function AbilitiesList({ abilities }) {
 
     )
 }
-export default AbilitiesList; 2
+export default AbilitiesList;
